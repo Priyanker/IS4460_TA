@@ -6,13 +6,18 @@
 </head>
 <body>
     <h1 style="text-align: center;">Update Movie Details</h1>
-    <!-- Update form here -->
-    <form action="movie-list.html">
-        <!-- Form fields for updating movie information -->
-        <!-- Submit button for updating -->
-        <input type="submit" value="Update Movie">
+    <form action="movie-list.html" method="post" class="form-container">
+        <label for="movieTitle">Movie Title:</label>
+        <input type="text" id="movieTitle" name="movieTitle">
+        
+        <label for="movieImage">Movie Image Path:</label>
+        <input type="text" id="movieImage" name="movieImage">
+        
+        <label for="movieTrailer">YouTube Trailer Link:</label>
+        <input type="text" id="movieTrailer" name="movieTrailer">
+        
+        <input type="submit" value="Update Movie" class="btn">
     </form>
-    <!-- Delete button -->
     <div style="text-align: center;">
         <button style="text-align: center;" onclick="window.location.href='movie-list.html'">Delete Movie</button>
     </div>

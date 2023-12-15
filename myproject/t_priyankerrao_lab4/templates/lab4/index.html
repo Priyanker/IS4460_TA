@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template Example</title>
+</head>
+<body>
+    {{ hi }}
+    <br>
+    Original name was {{ orig_name }}. The title name is {{ name }}
+    <br>
+
+    Original names list:
+    <ul>
+        {% for name in names %}
+            <li>{{ name }}</li>
+        {% endfor %}
+    </ul>
+
+    Title case names list:
+    <ul>
+        {% for name in fixed_names %}
+            <li>{{ name }}</li>
+        {% endfor %}
+    </ul>
+
+    Second name from list: {{ names.1 }}
+    <br>
+
+    Vehicle details:
+    <p>Color of car1: {{ car1.color }}, Sound it makes: {{ car1.honk }}, Number of wheels: {{ car1.wheels }}</p>
+    <p>Color of car2: {{ car2.color }}, Sound it makes: {{ car2.honk }}, Number of wheels: {{ car2.wheels }}</p>
+    <p>Make of motorcycle1: {{ motorcycle1.make }}, Year: {{ motorcycle1.year }}, Number of wheels: {{ motorcycle1.wheels }}</p>
+</body>
+</html>

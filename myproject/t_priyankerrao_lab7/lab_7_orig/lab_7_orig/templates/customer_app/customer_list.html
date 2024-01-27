@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer List</title>
+</head>
+<body>
+    <h1>Customer List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Logo</th>
+                <th>Notes</th>
+                <th>LinkedIn</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for customer in customers %}
+            <tr>
+                <td>{{ customer.id }}</td>
+                <td>{{ customer.name }}</td>
+                <td>
+                    {% if customer.logo %}
+                        <img src="{{ customer.logo.url }}" alt="Logo" height="50" />
+                    {% else %}
+                        No logo
+                    {% endif %}
+                </td>
+                <td>{{ customer.notes }}</td>
+                <td><a href="{{ customer.linkedin }}" target="_blank">LinkedIn</a></td>
+                <td>{{ customer.get_status_display }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6">No customers found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

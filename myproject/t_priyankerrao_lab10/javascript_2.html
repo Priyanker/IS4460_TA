@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Text:<br><textarea id="inputText" rows="4" cols="50"></textarea>
+
+    <div id="result">Message:<p id="message"></p></div>
+
+    <script>
+    document.getElementById('inputText').addEventListener('keyup', function() {
+        showText();
+    });
+
+    function showText() {
+        const MESSAGE = document.getElementById('inputText').value;
+        const messageText = document.getElementById('message');
+        messageText.innerText = MESSAGE;
+    }
+    </script>
+
+    
+</body>
+    
+</html>
